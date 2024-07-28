@@ -20,6 +20,7 @@ export default class AccountButton extends LightningElement {
         {
             this.ShowDetails=false;
             this.isButtonVisible =true;
+            console.log('GIt changing');
         }
     
 
