@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Government Engineering College Hassan">
+        <lightning-input type="text" label="Enter Name" value={name1} onchange={namehandleChange}></lightning-input>
+        <lightning-input type="Number" label="Age" value={age1} onchange={agehandleChange}></lightning-input>
+        <lightning-input type="Email" label="Email" value={email1} onchange={emailhandleChange}></lightning-input>
+        <lightning-input type="Phone" label="Phone" value={phone1} onchange={phonehandleChange}></lightning-input>
+        <lightning-input type="Number" label="Enter PUC marks" value={marks1} onchange={markshandleChange}></lightning-input>
+        <lightning-button label="submit" variant="success" onclick={submitTempOneForm}></lightning-button>
+    </lightning-card>
+</template>

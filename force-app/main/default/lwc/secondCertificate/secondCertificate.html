@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Certificate Application Form" icon-name="custom:custom85">
+        <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+        <lightning-input label="Applicant Name" type="text" value={applicantName} onchange={handleApplicantNameChange} required></lightning-input>
+        <lightning-input label="Father Name" type="text" value={fatherName} onchange={handleFatherNameChange} required></lightning-input>
+        <lightning-input label="Date of Birth" type="date" value={dob} onchange={handleDobChange} required></lightning-input>
+        <lightning-input label="Age" type="number" value={age} onchange={handleageChange} required></lightning-input>
+    </lightning-layout-item>
+    <lightning-layout-item size="6" padding="around-small">
+        <lightning-input label="Phone" type="phone" value={phone}  onchange={handlePhoneChange} required></lightning-input>
+        <lightning-input label="Email" type="email" value={email}  onchange={handleEmailChange} required></lightning-input>
+        <div class="error">{emailError}</div>
+        <lightning-input label="Address" type="text" value={address} onchange={handleAddressChange} required></lightning-input>
+        <lightning-combobox label="Certificate Type" value={selectCertificateType} options={certificateOptions} onchange={handleCertificateTypeChange} required></lightning-combobox>
+      <!-- <lightning-file-upload label="Attach Current/water bill" name="fileUploader" accept={acceptedFormats}  onuploadfinished={handleUploadFinished}></lightning-file-upload>-->
+    </lightning-layout-item>
+    </lightning-layout>
+        <lightning-button label="Submit Application" variant="brand" onclick={submitApplicationBtn} class="slds-align_absolute-center"></lightning-button>
+ 
+        <template if:true={showSuccessMessage}>
+            <div class="success-message">Application submitted successfully!</div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+   <lightning-card title="Iterator example with retrieving Contacts change behaviour of first and last element" icon-name="custom:custom14">
+        <template if:true={contactsList.data}>
+            <template iterator:itt={contactsList.data}>
+               <li key={itt.value.Id}>
+                   
+               <div if:true={itt.first} class="list-first"></div>
+                {itt.value.Name},{itt.value.Email},{itt.value.Phone}
+                <div if:true={itt.last} class="list-last"></div>
+            </li>
+        </template>
+    </template>
+    <template if:true={contactsList.error}>
+        {contactsList.error}
+    </template>
+    </lightning-card>
+</template>

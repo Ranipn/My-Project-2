@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Create Account Without LDS" icon-name="standard:account">
+     <div class="slds-p-around_x-small">
+        <lightning-input label="Name" value={rec.Name}  onchange={handleName}></lightning-input>
+        <lightning-input type="Phone" label="Phone" value={rec.Phone} onchange={handlePhone}></lightning-input>
+        <lightning-input label="Description" value={rec.Description} onchange={handleDescription}></lightning-input>
+        <lightning-button label="Save" variant="success" onclick={handleClick}></lightning-button>
+     </div>
+    </lightning-card>
+    
+</template>

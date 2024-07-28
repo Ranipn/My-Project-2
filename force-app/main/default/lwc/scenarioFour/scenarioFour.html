@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="When a user submits a record, handle any errors and provide feedback using toasts. And without using LDS Create the record.">
+
+        <lightning-input type="text" label="Enter your First Name" value={rec.Name} onchange={FirstNameChange}></lightning-input>
+        <lightning-input type="text" label="Enter your Account Number" value={rec.AccountNumber} onchange={EmailChange}></lightning-input>
+        <lightning-input type="text" label="Enter Description" value={rec.Description} onchange={DescriptionChange}></lightning-input>
+        <lightning-input type="Phone" label="Enter your Phone Number" value={rec.Phone} onchange={PhoneNoChange}></lightning-input>
+        
+
+        <lightning-button variant="brand" label="Submit" onclick={handleClick} ></lightning-button>
+
+    </lightning-card>
+</template>

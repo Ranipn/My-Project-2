@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>Displays the current user's name.</lightning-card>
+    <div class="slds-p-around_medium">
+        <p>Current User Name is:{currentDateTime}</p>
+        <template if:true={userName}>
+            <p>Hello, {userName}!</p>
+        </template>
+        <template if:false={userName}>
+            <p>Loading...</p>
+        </template>
+     </div>
+</template>

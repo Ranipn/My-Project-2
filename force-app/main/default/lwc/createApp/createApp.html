@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Certificate Application Form">
+        <lightning-input label="Applicant Name" type="text" value={applicantName} onchange={handleApplicantNameChange} required></lightning-input>
+        <lightning-input label="Date of Birth" type="date" value={dob} onchange={handleDobChange} required></lightning-input>
+        <lightning-input label="Email" type="email" value={email}  onchange={handleEmailChange} required></lightning-input>
+        <lightning-input label="Address" type="text" value={address} onchange={handleAddressChange} required></lightning-input>
+        <lightning-combobox label="Certificate Type" value={selectCertificateType} options={certificateOptions} onchange={handleCertificateTypeChange} required></lightning-combobox>
+    
+        <lightning-button label="Submit Application" variant="brand" onclick={submitApplicationBtn} class="slds-m-top_medium"></lightning-button>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="BMI Calculator" icon-name="utility:budget_period">
+        <lightning-input type="number" step="0.01" label="Enter weight in Kg " onchange={handleWeight}></lightning-input>
+        <lightning-input type="number" step="0.01" label="Enter height in meter " onchange={handleheight}></lightning-input>
+
+        <p><b>The BMI IS</b>:{result}</p>
+<lightning-button label="Result" variant="brand" onclick={handleClick}></lightning-button>
+        
+    </lightning-card>
+    
+</template>

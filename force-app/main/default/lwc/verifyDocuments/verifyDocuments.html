@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Verify Documents">
+        <!-- Input fields for document details -->
+        <lightning-input label="Document Name" type="text" value={documentName} onchange={handleDocumentNameChange}></lightning-input>
+        <lightning-input label="Document Type" type="text" value={documentType} onchange={handleDocumentTypeChange}></lightning-input>
+        <!-- Button to trigger verification -->
+        <lightning-button label="Verify" variant="brand" onclick={verifyDocuments}></lightning-button>
+        <!-- Display verification status -->
+        <p>{verificationStatus}</p>
+    </lightning-card>
+</template>

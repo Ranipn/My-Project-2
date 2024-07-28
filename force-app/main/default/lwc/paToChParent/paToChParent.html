@@ -1,0 +1,11 @@
+<template>
+   <lightning-card title="This is Parent to Child Compnent">
+      <div class="slds-var-m-around_medium">
+         <p>This is Parent Component</p>
+         <c-pa-to-ch-child greeting={GreetingFromparent}></c-pa-to-ch-child>
+         <lightning-input type="text" label="Enter Your Name" onchange={handleChange} value={valueFromParentToChild}></lightning-input>
+         <c-pa-to-ch-child parent-to-child={valueFromParentToChild}></c-pa-to-ch-child>
+
+      </div>
+   </lightning-card>
+</template>

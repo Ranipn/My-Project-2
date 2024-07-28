@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="reteieve the data using Imperative method" icon-name="utility:user">
+        <lightning-button label="Click to accountList" variant="success" onclick={handleClick}></lightning-button>
+<template if:true={accounts}>
+   <template for:each={accounts} for:item="acc1">
+   <lightning-layout key={acc1.id}>
+      <lightning-layout-item>
+        {acc1.Name}
+      </lightning-layout-item>
+
+   </lightning-layout>
+
+
+   </template>
+</template>        
+    </lightning-card>
+</template>

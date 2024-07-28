@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="You want to fetch and display a list of account records using the wire service.">
+        <template for:each={account.data} for:item="account1">
+            <li key={account1.Id}>{account1.Id}-{account1.Name}-{account1.Phone}</li>
+        </template>
+    </lightning-card>
+    
+</template>

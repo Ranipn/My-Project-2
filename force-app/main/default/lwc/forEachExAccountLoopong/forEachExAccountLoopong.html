@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account records retriewing from for:each">
+     <template if:true={accountList.data}>
+        <template for:each={accountList.data} for:item="acc">
+          <p key={acc.Id}>{acc.Name},{acc.Type},{acc.Rating}</p>
+        </template>
+    </template>
+    <template if:true={accountList.error}>
+        {accountList.error}
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="New Hello World">
+        <div>Hi, Good morning</div>
+    </lightning-card>
+    <lightning-card title="One way Data Binding">
+        <p>Hi, {name}</p>
+   </lightning-card>
+   <lightning-card title="Two way Data Binding">
+    <p>Hi, {name1}</p>
+    <lightning-input type="text" onchange={nameHandle} value="hiiii"></lightning-input>
+</lightning-card>
+
+<lightning-card title="Applying Css">
+    <div class="greeting">Hi,{one}</div>
+    <div style="color: blueviolet; background-color:chartreuse;">Inline CSS</div>
+    <div>Design with element tag name</div>
+</lightning-card>
+</template>

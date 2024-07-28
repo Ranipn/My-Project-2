@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Residential Proof Certificate">
+        <lightning-input label="Name" value={name} onchange={nameHandle}></lightning-input>
+        <lightning-input label="Address" value={address} onchange={addressHandle}></lightning-input>
+        <lightning-input type="date" label="Date of residence" value={dateofResidence}></lightning-input>
+        <lightning-button label="Generate Certificate" onclick={generateCertificate}></lightning-button>
+
+        <template if:true={certificate}>
+            <div>{certificate}</div>
+        </template>
+    </lightning-card>
+    
+</template>

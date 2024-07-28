@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent-To-Child Component">
+        <p>Parent component</p>
+        <c-parent-to-child-cc11 child-comp-from-parent={value} ></c-parent-to-child-cc11>
+   <lightning-input type="number" label="Enter the number" onchange={handleChange} value={value1}></lightning-input>
+   <c-parent-to-child-cc11 progressive-value={value1}></c-parent-to-child-cc11>
+</lightning-card>
+
+</template>

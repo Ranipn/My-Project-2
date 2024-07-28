@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Simple Calculator" icon-name="add_contact">
+        <lightning-input type="number" label="Enter first number" onchange={handleFirstNumber}></lightning-input>
+        <lightning-input type="number" label="Enter Second number" onchange={handleSecondNumber}></lightning-input>
+        <lightning-button variant="brand" label="Sum" onclick={showSum}></lightning-button>
+        <lightning-button variant="brand" label="Difference" onclick={showDifference}></lightning-button>
+        <lightning-button variant="brand" label="Multiplication" onclick={showMultiplication}></lightning-button>
+        <lightning-button variant="brand" label="Division" onclick={showDivision}></lightning-button>
+        <p>Result is:{result}</p>
+    </lightning-card>
+</template>

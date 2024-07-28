@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Simple Calculator" icon-name="utility:delete">
+        <lightning-input type="Number" label="Enter the first number" value={numberOne} onchange={handleChangeOne}></lightning-input>
+        <lightning-input type="Number" label="Enter the Second number" value={numberTwo}  onchange={handleChangeTwo}></lightning-input>
+        <p>The Result is:{result}</p>
+        <lightning-button label="Add" icon-name="utility:add" variant="brand" onclick={handleAdd}></lightning-button>
+        <lightning-button label="Sub" icon-name="utility:dash" variant="brand" onclick={handleSub}></lightning-button>
+        <lightning-button label="Mul" icon-name="utility:setup" variant="brand" onclick={handleMul}></lightning-button>
+        <lightning-button label="Div" icon-name="utility:call" variant="brand" onclick={handleDiv}></lightning-button>
+        <lightning-input type="checkbox" label="Show previous value" onchange={handleClick}></lightning-input>
+        <template if:true={checktoShowPrevious}>
+            <template iterator:re1={previousResult}>
+                <div key={re1.value}>
+                    <div if:true={re1.first} class="first-re"></div>
+                    {re1.value}
+                    <div if:true={re1.last} class="first-re"></div>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+    
+</template>

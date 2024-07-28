@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="For:Each Ex" icon-name="custom:custom14">
+        <template for:each={fruitList} for:item="fruit">
+            <div key={fruit}>
+                {fruit}
+            </div>
+        </template>
+    </lightning-card>
+    <lightning-card title="For:each EX2" icon-name="custom:custom12">
+        <template for:each={studentList} for:item="student">
+            <ul key={student.id}>{student.name}={student.age}</ul>
+        </template>
+    </lightning-card>
+</template>

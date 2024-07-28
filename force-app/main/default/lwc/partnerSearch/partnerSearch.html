@@ -1,0 +1,16 @@
+<template>
+    <p>{dogBreeds}t</p>
+<div>
+    <lightning-combobox name="progress" label="Status" value={value} placeholder="Select Progress" options={options} onchange={handleChange} ></lightning-combobox>
+
+
+    <p>Selected option: {value}</p>
+
+</div>
+
+<div>
+    <lightning-button-icon icon-name="action:add_relationship"  variant="brand" alternative-text="Add new Partner type" title="Add new Partner type"></lightning-button-icon>
+    <lightning-button-icon icon-name="action:new_account"  variant="brand" alternative-text="Add new Account" title="Add new Account"></lightning-button-icon>
+    <lightning-button-icon icon-name="action:new_contact"  variant="brand" alternative-text="Add new Partner Contact" title="Add new Partner Contact"></lightning-button-icon>
+</div>
+</template>

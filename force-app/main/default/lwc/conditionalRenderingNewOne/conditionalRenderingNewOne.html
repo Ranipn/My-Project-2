@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Coditional Rendering Example" icon-name="custom:custom14">
+        <tempate if:true={conditionTrue}>
+            <p>This is true part</p>
+        </tempate>
+
+        <tempate if:false={conditionfalse}>
+            <p>This is fasle part</p>
+        </tempate>
+
+    
+        <lightning-button label="Click me to toggle" onclick={flipTheSwitch}></lightning-button>
+        <template if:true={conditionTrueOne}>
+            <p>The above paragraph is visible because the condition is true</p>
+        </template>
+
+        <lightning-input type="checkbox" label="Check Me" onchange={handleChane}>
+
+        </lightning-input>
+        <template if:false={conditionFalseOne}>
+
+            <p>This paragrph is not visible because the condition is false</p>
+        </template>
+
+        <p><br><b>Retriving Data from Account with Condition retrieving</b></br></p>
+        <template if:true={accRecords.data}>
+            <template for:each={accRecords.data} for:item="acc">
+                <p key={acc.Id}>
+               {acc.Name}
+               {acc.Phone}
+               {acc.website}
+               {acc.AccountNumber}
+              </p>
+            </template>
+        </template>
+
+        <template if:true={accRecords.error}>
+            {accRecords.error}
+        </template>
+        
+    </lightning-card>
+</template>

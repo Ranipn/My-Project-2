@@ -1,0 +1,14 @@
+.list-first {
+    border-top: 1px solid black;
+    padding-top: 5px;
+    color: blue;
+    font-style: italic;
+    background-color: aqua;
+   
+}
+ 
+.list-last 
+{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}

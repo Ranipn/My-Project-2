@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>One Way Data Binding
+    <div>Hello {greeting}!</div>
+</lightning-card>
+
+    <lightning-card>Two Way Data Binding</lightning-card>
+    <lightning-input type="text" label="Enter a name" value={greeting} onchange={handleChange} ></lightning-input>
+
+    <lightning-card>Get Example</lightning-card>
+    <lightning-input label="Enter your Name" value={greeting1} onchange={handleChange1}></lightning-input>
+    <p>Upper cae is=>{upperCase1}</p>
+    
+</template>

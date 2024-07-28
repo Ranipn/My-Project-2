@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>I am parent Component</lightning-card>
+    <lightning-button label="Click me to Show child comp" variant="success" onclick={handleclick}>
+
+    </lightning-button>
+    <template if:true={showChild}>
+    <c-parent-to-child-child-comp  parentvalue-one={parentValue}></c-parent-to-child-child-comp>
+</template>
+</template>

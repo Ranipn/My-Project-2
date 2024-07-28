@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Enter Your Information">
+        <lightning-input type="text" label="Enter your First Name" value={firstName} onchange={firstNameHandle}></lightning-input>
+        <lightning-input type="text" label="Enter your Last Name" value={lasttName} onchange={lastNameHandle}></lightning-input>
+        <lightning-input type="Email" label="Enter your Email" value={email} onchange={emailHandle}></lightning-input>
+        <lightning-input type="text" label="Enter your Phone number" value={phone} onchange={phoneHandle}></lightning-input>
+       
+        
+        <lightning-button type="submit" label="Submit" onclick={handleClick}></lightning-button>
+
+    </lightning-card>
+    
+</template>

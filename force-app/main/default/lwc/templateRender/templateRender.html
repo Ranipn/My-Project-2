@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Template Render Example">
+        <lightning-card title="Select Your College">
+            <lightning-combobox name="progress" label="College" value={coll} placeholder="Select College" options={options} onchange={handleChange} ></lightning-combobox>
+<template if:true={geckCollege}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium">Modal Header</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <c-geck-college></c-geck-college>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button label="Close" variant="neutral" onclick={closeModal1}></lightning-button>
+            </footer>
+        </div>
+    </section>
+    
+</template>
+
+<template if:true={gechCollege}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-02" class="slds-text-heading_medium">Modal Header</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <c-gech-college></c-gech-college>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button label="Close" variant="neutral" onclick={closeModal2}></lightning-button>
+            </footer>
+        </div>
+    </section>
+    
+</template>
+
+<template if:true={geccCollege}>
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-03" class="slds-text-heading_medium">Modal Header</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+                <c-gecc-college></c-gecc-college>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button label="Close" variant="neutral" onclick={closeModal3}></lightning-button>
+            </footer>
+        </div>
+    </section>
+    
+   
+</template>
+
+    <p>Selected value is: {coll}</p>
+        </lightning-card>
+    </lightning-card>
+</template>

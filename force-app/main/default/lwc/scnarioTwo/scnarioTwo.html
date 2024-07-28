@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="2.You need to create a dynamic form with input fields that change based on user selection.">
+        <lightning-combobox name="status" label="Select Form type" value={comboValue} onchange={handleChange} options={statusOptions}>
+    </lightning-combobox>
+
+    <template if:true={showNameField}>
+        <lightning-input label="Enter Name"></lightning-input>
+    </template>
+
+    <template if:true={showEmailField}>
+        <lightning-input label="Enter Email"></lightning-input>
+    </template>
+    </lightning-card>
+
+    <lightning-card title="2.Select taluk based on Distric selection.">
+        <lightning-combobox name="Distric" label="Select Distric" value={DistricValue} onchange={handleDistricChange} options={TalukOptions}>
+    </lightning-combobox>
+    <template if:true={hassanDistic}>
+        <template for:each={HassanDistic} for:item="hassan">
+           <ul key={hassan.Id}>{hassan.name}</ul>
+        </template>
+    </template>
+
+    <template if:true={chikmagalurDistic}>
+        <template for:each={ChickmagalurDistic} for:item="chik">
+            <ul key={chik.Id}>{chik.name}</ul>
+        </template>
+    </template>
+     
+    </lightning-card>
+
+    
+</template>

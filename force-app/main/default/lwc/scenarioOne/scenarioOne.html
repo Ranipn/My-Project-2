@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="1.You need to create a dynamic form with input fields.">
+        <lightning-input type="text" label="Enter your First Name" value={FirstName} onchange={FirstNameChange}></lightning-input>
+        <lightning-input type="text" label="Enter your Last Name" value={LastName} onchange={LastNameChange}></lightning-input>
+        <lightning-input type="Phone" label="Enter your Phone Number" value={PhoneNumber} onchange={PhoneNoChange}></lightning-input>
+        <lightning-input type="Email" label="Enter your Email" value={Email} onchange={EmailChange}></lightning-input>
+
+        <lightning-button type="Submit" variant="brand" label="Submit" icon-name="utility:download" icon-position="right" onclick={handleClick} ></lightning-button>
+
+
+
+    </lightning-card>
+    
+</template>

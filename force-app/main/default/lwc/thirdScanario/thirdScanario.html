@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Retrieves and displays the current user's name.">
+        <template if:true={currentUser}>
+        <p>Current User is:{currentUser}</p>
+    </template>
+
+    <template if:false={currentUser}>
+        <p>Loading....</p>
+    </template>
+    </lightning-card>
+</template>

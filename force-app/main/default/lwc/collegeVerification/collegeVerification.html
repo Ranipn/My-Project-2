@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="All Student Details">
+       
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                  <thead>
+                    <tr>
+                   <th>Sl. No</th>   
+                    <th>Student Name</th>
+                    <th>Father Name</th>
+                    <th>Email</th>
+                    <th>PUC/Diploma Marks</th>
+                    <th>College Name</th>
+                </tr>
+                  </thead>
+                  <tbody>
+                    <template for:each={inputApplication} for:item="collappln">
+                      <tr key={collappln.id}>
+                        <td>{collappln.serialNumber}</td> 
+                        <td>{collappln.Student_Name__c}</td>
+                        <td>{collappln.Fateher_Name__c}</td>
+                        <td>{collappln.Email__c}</td>
+                        <td>{collappln.Enter_PUC_Diploma_marks__c}</td>
+                        <td>{collappln.Select_College__c}</td>
+                      </tr>
+                    </template>
+                </tbody>
+            </table>
+
+            <footer slot="footer" style="text-align: center">
+                <ul class="slds-pagination">
+                    <li class="slds-button slds-button_icon page-item" key={previousKey} onclick={previousPage}>
+                        <a class="slds-button__icon" href="javascript:void(0);" aria-label="Previous">
+                            <lightning-icon icon-name="utility:left" size="x-small"></lightning-icon>
+                        </a>
+                    </li>
+                    <template for:each={pages} for:item="page">
+                        <li class="slds-button slds-button_icon page-item" key={page.key} onclick={gotoPage}>
+                            <a class="slds-button_icon" href="javascript:void(0);">{page.number}</a>
+                        </li>
+                    </template>
+                    <li class="slds-button slds-button_icon page-item" key={nextKey} onclick={nextPage}>
+                        <a class="slds-button__icon" href="javascript:void(0);" aria-label="Next">
+                            <lightning-icon icon-name="utility:right" size="x-small"></lightning-icon>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+      
+    </lightning-card>
+</template>

@@ -1,0 +1,152 @@
+<template>
+   
+    <template if:true={certificateApplication}>
+        <lightning-card title="Application Details">
+            
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th>Applicant Name</th>
+                            <th>Certificate Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={certificateApplication} for:item="certApp1">
+                            <tr key={certApp1.Id}>
+                                <td>{certApp1.Applicant_Name__c}</td>
+                                <td>{certApp1.Certificate_Type__c}</td>
+                                <td>{certApp1.Verification_Status__c}</td>
+                                <td>
+                                    <lightning-button class="button" label="Verify" variant="brand" onclick={handleReview} 
+                                    data-id={certApp1.Id} ></lightning-button>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            
+              
+                <template if:true={isModalOpen}>
+                    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                          <header class="slds-modal__header">
+                            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Applicat Details</h1>
+                          </header>
+                          
+                         
+                           
+<!--
+                          <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                <tr>
+                                    <th>Applicant Name</th>
+                                    <th>Father Name</th>
+                                    <th>DOB</th>
+                                    <th>Age</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Certificate Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={selectedApplicant} for:item="selApp">
+                                    <tr key={selApp.Id}>
+                                        <td>{selApp.Applicant_Name__c}</td>
+                                        <td>{selApp.Father_Name__c}</td>
+                                        <td>{selApp.Date_of_Birth__c}</td>
+                                        <td>{selApp.Age__c}</td>
+                                        <td>{selApp.Phone__c}</td>
+                                        <td>{selApp.Email__c}</td>
+                                        <td>{selApp.Address__c}</td>
+                                        <td>{selApp.Certificate_Type__c}</td>
+                                       
+
+                                    </tr>
+                                   
+                                </template>
+                            </tbody>
+                        </table>
+                         </template>
+               
+            -->
+                       <lightning-datatable key-field={clickRecordId} data={selectedApplicant.data} columns={columns} ></lightning-datatable>  
+
+   
+                        
+                       <!--   <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                             <p class="strong">Applicant Name: {selectedApplicant.Applicant_Name__c}</p>
+                             <p class="strong">Father Name: {selectedApplicant.Father_Name__c}</p>
+                             <p class="strong">Date of Birth: {selectedApplicant.Date_of_Birth__c}</p>
+                             <p class="strong">Age: {selectedApplicant.Age__c}</p>
+                             <p class="strong">Phone: {selectedApplicant.Phone__c}</p>
+                             <p class="strong">Email: {selectedApplicant.Email__c}</p>
+                             <p class="strong">Address: {selectedApplicant.Address__c}</p>
+                             <p class="strong">Certificate Type: {selectedApplicant.Certificate_Type__c}</p>
+                          </div>
+                        -->
+
+                       
+                          <div class="slds-modal__footer">
+        
+                            <lightning-button variant="success" label="Approve" title="Approve" onclick={approveApplicant}></lightning-button>
+                            <lightning-button variant="destructive" label="Reject" title="Reject" onclick={rejectApplicant}></lightning-button>
+                            <lightning-button variant="neutral" label="close" title="close" onclick={closeApplicant}></lightning-button>
+                          <!--  <button class="slds-button slds-button_neutral" aria-label="Cancel and close">Cancel</button>
+                            <button class="slds-button slds-button_brand">Save</button>-->
+                          </div>
+                       
+                
+                 
+                
+
+                        </div>
+                      </section>
+                      <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+                    </template>
+           </lightning-card>
+           </template>
+
+  <!--
+<template if:true={certificateApplication}>
+    <lightning-card title="Certificate Verification">
+        <template if:true={certificateApplication}>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th>Applicant Name</th>
+                        <th>Date of Birth</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Certificate Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={certificateApplication} for:item="certApp1">
+                        <tr key={certApp1.Id}>
+                            <td>{certApp1.ApplicantName__c}</td>
+                            <td>{certApp1.Date_of_Birth__c}</td>
+                            <td>{certApp1.Address__c}</td>
+                            <td>{certApp1.Email__c}</td>
+                            <td>{certApp1.Certificate_Type__c}</td>
+                            <td>{certApp1.Verification_Status__c}</td>
+                            <td>
+                                <lightning-button label="Verify" variant="brand" onclick={handleVerify} data-id={certApp1.Id} disabled={isVerifyDisabled}></lightning-button>
+                            </td>
+                            <td>
+                                <lightning-button label="Review" variant="brand" onclick={handleReview} data-id={certApp1.Id} ></lightning-button>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template if:false={certificateApplication}>
+            <div> No Certificate applications to verify</div>
+        </template>
+    </lightning-card>
+    </template>
+--> 
+</template>

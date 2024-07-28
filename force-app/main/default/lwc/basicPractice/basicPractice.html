@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>If-true Example</lightning-card>
+    <lightning-input type="checkbox" label="Show Details" onchange={handleChange}> </lightning-input>
+        <template if:true={showDetails}>
+            Hi, This is true part
+        </template>
+   
+
+        <lightning-card>If-false Example</lightning-card>
+        <lightning-button label="Click Me" variant="brand" onclick={handleClick}></lightning-button>
+        
+        <template if:false={showButton}>
+            Hi, this is false part
+        </template>
+    
+</template>

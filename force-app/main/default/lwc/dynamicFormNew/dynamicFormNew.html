@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Input Form" icon-name="custom:custom14">
+        <lightning-input type="text" label="Enter Account Name" value={name} onchange={accNameHandleChane}></lightning-input>
+        <lightning-input type="Phone" label="Enter Phone No" value={phone} onchange={accPhoneHandleChane}></lightning-input>
+        <lightning-input type="Number" label="Enter Account No" value={accNumber} onchange={accNumberHandleChane}></lightning-input>
+        <lightning-button label="submit" variant="success" onclick={handleSubmitClick}></lightning-button>
+    </lightning-card>
+</template>

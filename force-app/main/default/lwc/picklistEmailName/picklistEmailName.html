@@ -1,0 +1,21 @@
+<template>
+   <lightning-card title="Input Form" icon-name="custom:custom14">
+
+    <lightning-combobox label="Select Form Type" value={selectedFormType} options={formTypeOptions} onchange={handleFormTypeChange}></lightning-combobox>
+
+    <template if:true={nameValue}>
+        <lightning-input type="text" label="Enter Name"></lightning-input>
+    </template>
+
+    <template if:true={emailValue}>
+        <lightning-input type="Email" label="Enter Email"></lightning-input>
+    </template>
+    <lightning-button label="Submit" variant="brand" onclick={handleClick}></lightning-button>
+   </lightning-card> 
+<lightning-card title="When a user submits a record, handle any errors and provide feedback using toasts.">
+<lightning-input type="text" label="Enter your Name" value={handleValue} onchange={handleChange1}></lightning-input>
+<lightning-button label="Submit1" variant="brand" onclick={handleClick1}></lightning-button>
+
+</lightning-card>
+
+</template> 

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="displays a modal dialog when a link is clicked">
+  
+        <div class="slds-p-around_medium">
+           
+         <lightning-button label="Open Modal" variant="success" onclick={openModal}></lightning-button>
+            <template if:true={isModalOpen}>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium">Modal Header</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p>This is a modal dialog content.</p>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <lightning-button label="Close" variant="neutral" onclick={closeModal}></lightning-button>
+                        </footer>
+                    </div>
+                </section>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card><b>Account Details</b></lightning-card>
+    <lightning-button if:true={isButtonVisible} label="Click me to Show Account Details" variant="success" onclick={handleClick}></lightning-button>
+    <template if:true={ShowDetails}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                
+                <button onclick={popUpCloseHandler} 
+                class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+              <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+               
+               </button>
+               
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-record-form object-api-name={objectApiName} record-id={recordId} layout-type="Full" columns="2"></lightning-record-form>
+ 
+                </div>
+                
+                
+            </div>
+        </section>
+
+       
+    </template>
+    <template if:false={ShowDetails}></template>
+</template>

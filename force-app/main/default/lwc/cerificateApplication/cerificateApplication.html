@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Select your Certificate">
+        <lightning-combobox name="progress" label="Status" value={certificateValue} placeholder="Select Progress" options={options} onchange={handleChange} ></lightning-combobox>
+    </lightning-card>
+    <template if:true={characterCertificate1}>
+        <c-character-certificate></c-character-certificate>
+    </template>
+<template if:true={residentialCertificate1}>
+    <c-residential-certificate></c-residential-certificate>
+</template>
+   
+</template>
